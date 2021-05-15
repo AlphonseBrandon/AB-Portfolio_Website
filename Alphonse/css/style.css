@@ -1,13 +1,15 @@
 /** IMPORT */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Pacifico&family=Roboto:ital,wght@0,400;0,500;0,700;1,300&display=swap");
 
-/** GENERAL STYLES */
+/*! GENERAL STYLES */
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
   font-size: 20px;
+  color: #9fa2a8;
 }
 
 ::selection {
@@ -15,67 +17,9 @@
   color: #1f2632;
 }
 
-/*? GENERAL CLASSES */
-
 .container {
   width: 85%;
   margin: 0 auto;
-}
-.background-dark {
-  background-color: #1f2632;
-}
-.background-light {
-  background-color: #222a36;
-}
-
-.color-primary {
-  color: #3e4651;
-}
-.color-primary-dark {
-  color: #29313d;
-}
-.color-secondary {
-  color: #676cdb;
-  font-family: "Montserrat", sans-serif;
-}
-.color-tertiary {
-  color: #3aafc9;
-  font-family: "Montserrat", sans-serif;
-  font-size: 53px;
-  font-weight: bold;
-}
-.color-white {
-  color: #fff;
-  font-family: "Montserrat", sans-serif;
-  font-weight: bold;
-  font-size: 40px;
-  text-transform: capitalize;
-}
-.color-gray {
-  color: #9fa2a8;
-  font-family: "Roboto", sans-serif;
-  font-size: 23px;
-}
-
-.script-font {
-  font-family: "Pacifico", cursive;
-  font-size: 110px;
-  font-weight: 500;
-  text-transform: capitalize;
-  position: absolute;
-  transform: rotate(-12deg);
-}
-
-.sub-title {
-  text-transform: capitalize;
-}
-
-.text-primary {
-  font-family: "Montserrat", sans-serif;
-}
-
-.text-secondary {
-  font-family: "Roboto", sans-serif;
 }
 
 .logo-box {
@@ -96,47 +40,23 @@
   top: 0.7rem;
   right: 0.2rem;
 }
-.btn {
-  display: inline-block;
-  background-color: transparent;
-  border: none;
-  outline: none;
-  text-decoration: none;
-  color: #fff;
+
+.sub-title {
+  font-size: 20px;
   text-transform: capitalize;
-  padding: 0.5rem;
 }
 
-.btn-primary,
-.btn-secondary {
-  border: none;
-  outline: none;
-  position: relative;
+.script-font {
+  color: #3e4651;
+  font-family: "Pacifico", cursive;
+  font-size: 110px;
   font-weight: 500;
-}
-.btn-primary {
-  background-color: transparent;
-  color: #3aafc9;
-}
-.btn-secondary {
-  border: 1px solid #676cdb;
-  color: #fff;
-  border-radius: 15px;
-  padding: 0.6rem;
-}
-
-h1 {
+  text-transform: capitalize;
+  position: absolute;
+  transform: rotate(-12deg);
   z-index: -1;
 }
 
-/* ? BODY */
-#index {
-  height: 95vh;
-  background-color: #222a36;
-  position: relative;
-  font-family: "Montserrat", sans-serif;
-  padding: 2rem 0;
-}
 #index .navigation,
 #about .navigation,
 #blog .navigation,
@@ -195,66 +115,93 @@ h1 {
 #contact .navigation .nav-bar ul li:hover a::after {
   background-color: #676cdb;
 }
+#head-text {
+  font-size: 30px;
+  font-weight: 600;
+  color: #fff;
+  text-transform: capitalize;
+}
+#sub-text {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* ! INDEX PAGE */
+
+#index {
+  height: 95vh;
+  background-color: #222a36;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  padding: 2rem 0;
+}
 
 #skills {
-  height: 109vh;
+  height: 120vh;
   background-color: #1f2632;
   position: relative;
+  padding: 10em 0;
   z-index: 1;
 }
 #skills .flex-skills {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding-top: 5rem;
+  display: grid;
+  column-gap: 10rem;
+  grid-template-columns: repeat(2, 1fr);
+  position: inherit;
 }
-#skills .flex-skills .flex-skills-left {
-  flex: 50%;
+#skills .flex-skills .script-font {
+  top: 14%;
 }
 #skills .flex-skills .flex-skills-left #skills-columns {
   display: flex;
-  padding-top: 9rem;
+  flex-wrap: wrap;
   justify-content: space-around;
+  padding: 15% 0;
+}
+#skills .flex-skills .flex-skills-left #skills-columns * {
+  padding-top: 15px;
 }
 #skills .flex-skills .flex-skills-left #skills-columns ul {
   list-style-type: none;
 }
-
-#skills .flex-skills .flex-skills-left #skills-columns div:first-child li {
-  padding-top: 1rem;
+#skills .flex-skills .flex-skills-left #skills-columns ul li {
+  font-size: 20px;
+  font-weight: 600;
   text-transform: capitalize;
 }
 
-#skills .flex-skills .flex-skills-left #skills-columns div:last-child li {
-  padding-top: 1rem;
+#skills .flex-skills .flex-skills-left #skills-columns h2 {
+  color: #3aafc9;
+  font-size: 35px;
+  font-weight: 900;
+}
+#skills .flex-skills .flex-skills-right * {
+  padding-bottom: 5%;
+}
+#skills .flex-skills .flex-skills-right #head-text {
+  font-size: 30px;
+  font-weight: 600;
+  color: #fff;
   text-transform: capitalize;
 }
-#skills .flex-skills .flex-skills-right {
-  flex: 40%;
-}
-#skills .flex-skills .flex-skills-right p {
-  padding-top: 2rem;
+#skills .flex-skills .flex-skills-right #sub-text {
+  font-size: 20px;
+  font-weight: 500;
 }
 #skills .companies {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 7rem;
+  margin: 3rem 0;
 }
 #skills .companies div {
-  font-family: "Roboto", sans-serif;
-  font-size: 2rem;
-  font-weight: bold;
-  padding: 0 2rem;
+  font-size: 30px;
+  font-weight: 700;
+  padding: 0 1rem;
 }
-/* #skills .companies div svg {
-  position: absolute;
-  left: 48rem;
-  bottom: 17.2rem;
-} */
-
 #skills .flex-cards {
   display: flex;
+  flex-wrap: wrap;
   padding-top: 7rem;
   justify-content: center;
   align-items: center;
@@ -266,6 +213,9 @@ h1 {
   font-family: "pacifico", sans-serif;
   padding: 9rem 2rem 0;
   margin: 0 1rem;
+}
+#skills .flex-cards #cards * {
+  color: #fff;
 }
 #skills .flex-cards #cards:nth-child(2) {
   background-color: #676cdb;
@@ -290,8 +240,22 @@ h1 {
   padding-top: 25rem;
   z-index: -1;
 }
-#works h1 {
-  padding-left: 13rem;
+#works .script-font {
+  top: 25%;
+  left: 17%;
+}
+#works p {
+  padding-top: 2%;
+}
+#works #head-text {
+  font-size: 30px;
+  font-weight: 600;
+  color: #fff;
+  text-transform: capitalize;
+}
+#works #sub-text {
+  font-size: 20px;
+  font-weight: 500;
 }
 #works .flex-works {
   padding-top: 13rem;
@@ -345,6 +309,7 @@ h1 {
 #works .flex-works span {
   font-weight: lighter;
   font-family: "roboto", sans-serif;
+  color: #3e4651;
 }
 #works .flex-works #flex-works-left {
   justify-self: start;
@@ -367,7 +332,6 @@ h1 {
   position: relative;
   z-index: 0;
 }
-
 #testimonials .swiper-container {
   padding-top: 3.5rem;
   /* -webkit-box-reflect: below 4px linear-gradient(transparent 70%, #000009); */
@@ -379,43 +343,6 @@ h1 {
   background-color: #222a36;
   max-height: 35vh;
 }
-#testimonials .swiper-slide .card .img-box {
-  width: 100%;
-  /* height: 60%; */
-  margin-right: 2rem;
-}
-#testimonials .swiper-slide .card .img-box img {
-  width: 90%;
-  height: 100%;
-  border-radius: 5px;
-  object-fit: cover;
-}
-#testimonials .swiper-slide .card .content {
-  padding: 20px 20px 0;
-}
-#testimonials .swiper-slide .card .content .quotes .fas {
-  font-size: 50px;
-  color: #3e4651;
-}
-#testimonials .swiper-slide .card .content p {
-  margin-top: 1rem;
-  text-align: left;
-}
-#testimonials .swiper-slide .card .content .text {
-  font-size: 1.7rem;
-  color: #fff;
-  text-align: left;
-}
-#testimonials .swiper-slide .card .content .text span {
-  font-size: 2rem;
-  color: #3aafc9;
-  font-weight: bold;
-}
-
-#testimonials .swiper-button-next,
-#testimonials .swiper-button-prev {
-  color: #676cdb;
-}
 
 #connect {
   height: 100vh;
@@ -423,37 +350,41 @@ h1 {
   position: relative;
   padding-top: 5rem;
 }
-#connect .flex-connect {
-  display: flex;
+#connect .flex-connect,
+#contact-me .flex-contact-me {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
-#connect .flex-connect #flex-connect-left {
-  flex: 50%;
-}
-#connect .flex-connect #flex-connect-left h2 {
+#connect .flex-connect #flex-connect-left h2,
+#contact-me .flex-contact-me #flex-contact-me-left h2 {
   font-size: 83px;
   font-weight: bold;
+  color: #fff;
 }
-#connect .flex-connect #flex-connect-left h1 {
+#connect .flex-connect #flex-connect-left h1,
+#contact-me .flex-contact-me #flex-contact-me-left h1 {
   z-index: 1;
 }
-#connect .flex-connect #flex-connect-left h2 span {
+#connect .flex-connect #flex-connect-left h2 span,
+#contact-me .flex-contact-me #flex-contact-me-left h2 span {
   position: absolute;
   color: #3aafc9;
   font-weight: bolder;
   font-size: 100px;
   padding-top: 0.3rem;
 }
-#connect .flex-connect #flex-connect-right {
-  flex: 50%;
+#connect .flex-connect #flex-connect-left h2 #arrow-downward,
+#contact-me .flex-contact-me #flex-contact-me-left h2 #arrow-downward {
+  display: none;
 }
-#connect .flex-connect #flex-connect-right form {
-  z-index: 1;
-}
-#connect .flex-connect #flex-connect-right form .input {
+#connect .flex-connect #flex-connect-right form .input,
+#contact-me .flex-contact-me #flex-contact-me-right form .input {
   padding-bottom: 2rem;
 }
 #connect .flex-connect #flex-connect-right form .input input,
-#connect .flex-connect #flex-connect-right form .input textarea {
+#connect .flex-connect #flex-connect-right form .input textarea,
+#contact-me .flex-contact-me #flex-contact-me-right form .input input,
+#contact-me .flex-contact-me #flex-contact-me-right form .input textarea {
   border: none;
   color: #9fa2a8;
   outline: none;
@@ -464,14 +395,28 @@ h1 {
   width: 100%;
 }
 #connect .flex-connect #flex-connect-right form .input input::placeholder,
-#connect .flex-connect #flex-connect-right form .input textarea::placeholder {
+#connect .flex-connect #flex-connect-right form .input textarea::placeholder,
+#contact-me
+  .flex-contact-me
+  #flex-contact-me-right
+  form
+  .input
+  input::placeholder,
+#contact-me
+  .flex-contact-me
+  #flex-contact-me-right
+  form
+  .input
+  textarea::placeholder {
   color: #9fa2a8;
 }
-#connect .flex-connect #flex-connect-right form .input textarea {
+#connect .flex-connect #flex-connect-right form .input textarea,
+#contact-me .flex-contact-me #flex-contact-me-right form .input textarea {
   resize: none;
   height: 30vh;
 }
-#connect .flex-connect #flex-connect-right form .button button {
+#connect .flex-connect #flex-connect-right form .button button,
+#contact-me .flex-contact-me #flex-contact-me-right form .button button {
   border: none;
   outline: none;
   background-color: transparent;
@@ -481,7 +426,15 @@ h1 {
   pointer-events: all;
   cursor: pointer;
 }
-#connect .flex-connect #flex-connect-right form .button button .material-icons {
+#connect .flex-connect #flex-connect-right form .button button .material-icons,
+#contact-me
+  .flex-contact-me
+  #flex-contact-me-right
+  form
+  .button
+  button
+  .material-icons {
+  color: #3aafc9;
   font-size: 40px;
   font-weight: bold;
   position: absolute;
@@ -490,16 +443,18 @@ h1 {
 }
 
 #footer {
-  height: 10vh;
   font-family: "Montserrat", sans-serif;
   text-align: center;
 }
-
+.footer-background {
+  background: #222a36;
+  height: 27vh;
+}
 #footer .social {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* margin-top: 1rem; */
+  margin-top: 2rem;
 }
 #footer .social .social-icons {
   background-color: #3e4651;
@@ -521,7 +476,7 @@ h1 {
   margin-top: 1rem;
 }
 
-/* ! ABOUT ME PAGE */
+/* ! ABOUT PAGE */
 #about {
   height: 95vh;
   background-color: #222a36;
@@ -530,16 +485,20 @@ h1 {
   padding: 2rem 0;
 }
 #about .flex-about-content {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   margin-top: 5rem;
 }
-#about .flex-about-content .flex-about-left {
-  flex: 60%;
-}
-
 #about .flex-about-content .flex-about-left > div {
   padding-bottom: 2rem;
+  position: relative;
 }
+#about .flex-about-content .flex-about-left h1 {
+  font-size: 60px;
+  font-weight: bold;
+  color: #3aafc9;
+}
+
 #about .flex-about-content .flex-about-left div a span {
   font-size: 27px;
   font-weight: 500;
@@ -547,12 +506,8 @@ h1 {
   top: 0.4rem;
   left: 7.5rem;
 }
-#about .flex-about-content .flex-about-right {
-  flex: 40%;
-  margin-left: 8rem;
-}
 #about .flex-about-content .flex-about-right .img-box {
-  max-width: 70%;
+  max-width: 50%;
 }
 #about .flex-about-content .flex-about-right img {
   width: 100%;
@@ -643,21 +598,317 @@ h1 {
   object-fit: cover;
   display: block;
 }
-
-/* ! BLOG */
-#blog {
-  height: 75vh;
+.about-foot {
+  height: 25vh;
+  background-color: #1f2632;
+}
+.contact-me-footer {
+  height: 25vh;
   background-color: #222a36;
+}
+
+/* !my-blog */
+#blog {
   position: relative;
   font-family: "Montserrat", sans-serif;
   padding: 2rem 0;
 }
+#blog-article {
+  position: relative;
+  padding: 3rem 0 0;
+  width: 60%;
+  margin: auto;
+}
+article {
+  background-color: #1f2632;
+  border-radius: 30px;
+  box-shadow: 0px 2px 10px #00000056;
+  padding: 40px 40px 20px;
+  margin-bottom: 2rem;
+}
+.blog-post .title {
+  color: #676cdb;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-family: "Montserrat", sans-serif;
+}
+.blog-post .img-box {
+  margin: 1rem 0;
+  width: 100%;
+}
+.blog-post .img-box img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
+.blog-post .text-article {
+  color: #fff;
+  font-size: 19px;
+  line-height: 1.4;
+}
+.blog-post .text-article button {
+  background-color: transparent;
+  color: #676cdb;
+  border: none;
+  outline: none;
+}
+.blog-post .article-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0 0;
+}
+.blog-post .article-footer .flex-left {
+  display: flex;
+}
+.blog-post .article-footer .flex-left button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding-right: 1rem;
+  cursor: pointer;
+}
+.blog-post .article-footer .flex-left button #count {
+  color: #3aafc9;
+  font-size: 12px;
+}
+.blog-post .article-footer .flex-left .button-text,
+.blog-post .article-footer .flex-left i {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600;
+}
+.blog-post .article-footer .flex-right {
+  display: flex;
+}
+.blog-post .article-footer .flex-right button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding-right: 1rem;
+  padding-right: 1rem;
+}
+.blog-post .article-footer .flex-right button span,
+.blog-post .article-footer .flex-right i {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600;
+}
+.blog-post .article-footer .flex-right p {
+  color: #3aafc9;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 2px;
+}
 
-/* ! CONTACT PAGE */
+/* !contact-me */
 #contact {
-  height: 20vh;
+  height: 40vh;
   background-color: #222a36;
   position: relative;
-  font-family: "Montserrat", sans-serif;
-  padding: 2rem 0;
+  padding-top: 2rem;
+}
+#contact-me {
+  background-color: #222a36;
+  height: 100vh;
+}
+
+/* ! MEDIA QUERY */
+
+@media only screen and (max-width: 600px) {
+  #skills {
+    height: 240vh;
+    background-color: #1f2632;
+    position: relative;
+    padding: 10em 0;
+  }
+  #skills .flex-skills {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 5rem;
+  }
+  #skills .flex-skills .script-font {
+    top: 5%;
+    font-size: 60px;
+  }
+  #skills .flex-skills .flex-skills-left #skills-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+  }
+  #skills .companies div {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 0 1rem;
+  }
+  #skills .flex-cards {
+    padding-top: 3rem;
+  }
+  #skills .flex-cards #cards {
+    margin-bottom: 2rem;
+  }
+
+  #works {
+    height: 330vh;
+    background-color: #222a36;
+    position: relative;
+    padding-top: 40rem;
+    z-index: -1;
+  }
+  #works .script-font {
+    top: 53rem;
+    font-size: 60px;
+  }
+  #works .flex-works #flex-works-right .date-box {
+    display: inline-block;
+    font-family: "Montserrat", sans-serif;
+    position: absolute;
+    left: 12rem;
+    top: 66rem;
+  }
+  #works .flex-works .date-box div:first-child {
+    display: inline-block;
+    background-color: #f1b457;
+    border-radius: 50px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 15px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    padding-top: 0.8rem;
+    z-index: 1;
+  }
+  #works .flex-works .date-box div:last-child {
+    display: inline-block;
+    background-color: #29313d;
+    border-radius: 50px;
+    color: #3e4651;
+    font-weight: bold;
+    font-size: 15px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    padding-top: 0.6rem;
+    position: absolute;
+    z-index: -1;
+    left: 2.1rem;
+  }
+  #works .flex-works #flex-works-right {
+    background-color: #29313d;
+    border-radius: 20px;
+    justify-self: start;
+    height: 60vh;
+    width: 39vh;
+    margin-top: 5rem;
+  }
+  #works .flex-works #flex-works-left {
+    background-color: #29313d;
+    border-radius: 20px;
+    justify-self: start;
+    height: 60vh;
+    width: 39vh;
+    margin-top: 9rem;
+  }
+  #works .flex-works #flex-works-left .date-box {
+    display: inline-block;
+    font-family: "Montserrat", sans-serif;
+    position: absolute;
+    right: 14rem;
+    top: 99rem;
+  }
+
+  #connect {
+    height: 120vh;
+    background-color: #222a36;
+    position: relative;
+    padding-top: 5rem;
+  }
+
+  #connect .flex-connect,
+  #contact-me .flex-contact-me {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #connect .flex-connect .script-font,
+  #contact-me .flex-contact-me .script-font {
+    font-size: 60px;
+  }
+  #connect .flex-connect #flex-connect-left h2,
+  #contact-me .flex-contact-me #flex-contact-me-left h2 {
+    font-size: 53px;
+    font-weight: bold;
+    color: #fff;
+  }
+  #connect .flex-connect #flex-connect-left h2 span,
+  #contact-me .flex-contact-me #flex-contact-me-left h2 span {
+    position: absolute;
+    color: #3aafc9;
+    font-weight: bolder;
+    font-size: 60px;
+    padding-top: 0.3rem;
+  }
+  #connect .flex-connect #flex-connect-left h2 #arrow-downward,
+  #contact-me .flex-contact-me #flex-contact-me-left h2 #arrow-downward {
+    display: inline-block;
+  }
+  #connect .flex-connect #flex-connect-left h2 #arrow-forward,
+  #contact-me .flex-contact-me #flex-contact-me-left h2 #arrow-forward {
+    display: none;
+  }
+  #connect .flex-connect #flex-connect-right,
+  #contact-me .flex-contact-me #flex-contact-me-right {
+    margin: 8rem 0;
+  }
+  #connect .flex-connect #flex-connect-right form .input input,
+  #connect .flex-connect #flex-connect-right form .input textarea,
+  #contact-me .flex-contact-me #flex-contact-me-right form .input input,
+  #contact-me .flex-contact-me #flex-contact-me-right form .input textarea {
+    border: none;
+    color: #9fa2a8;
+    outline: none;
+    font-size: 18px;
+    background-color: #29313d;
+    line-height: 1;
+    padding: 1rem 0.5rem;
+    width: 100%;
+  }
+
+  /* !ABOUT PAGE */
+  #about {
+    height: 200vh;
+    background-color: #222a36;
+    position: relative;
+    font-family: "Montserrat", sans-serif;
+    padding: 2rem 0;
+  }
+  #about .flex-about-content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 5rem;
+  }
+  #about .flex-about-content .flex-about-left div a {
+    display: block;
+  }
+
+  /* !contact-me PAGE */
+  #contact {
+    height: 40vh;
+    background-color: #222a36;
+    position: relative;
+  }
+  .contact-me-footer {
+    background-color: #222a36;
+    height: 30vh;
+  }
+  #contact-me .flex-contact-me .script-font {
+    left: 1rem;
+    font-size: 55px;
+  }
+  #contact-me {
+    background-color: #222a36;
+    height: 130vh;
+  }
 }
