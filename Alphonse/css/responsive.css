@@ -607,6 +607,102 @@
   background-color: #222a36;
 }
 
+/* !my-blog */
+#blog {
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  padding: 2rem 0;
+}
+#blog-article {
+  position: relative;
+  padding: 3rem 0 0;
+  width: 60%;
+  margin: auto;
+}
+article {
+  background-color: #1f2632;
+  border-radius: 30px;
+  box-shadow: 0px 2px 10px #00000056;
+  padding: 40px 40px 20px;
+  margin-bottom: 2rem;
+}
+.blog-post .title {
+  color: #676cdb;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-family: "Montserrat", sans-serif;
+}
+.blog-post .img-box {
+  margin: 1rem 0;
+  width: 100%;
+}
+.blog-post .img-box img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
+.blog-post .text-article {
+  color: #fff;
+  font-size: 19px;
+  line-height: 1.4;
+}
+.blog-post .text-article button {
+  background-color: transparent;
+  color: #676cdb;
+  border: none;
+  outline: none;
+}
+.blog-post .article-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0 0;
+}
+.blog-post .article-footer .flex-left {
+  display: flex;
+}
+.blog-post .article-footer .flex-left button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding-right: 1rem;
+  cursor: pointer;
+}
+.blog-post .article-footer .flex-left button #count {
+  color: #3aafc9;
+  font-size: 12px;
+}
+.blog-post .article-footer .flex-left .button-text,
+.blog-post .article-footer .flex-left i {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600;
+}
+.blog-post .article-footer .flex-right {
+  display: flex;
+}
+.blog-post .article-footer .flex-right button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding-right: 1rem;
+  padding-right: 1rem;
+}
+.blog-post .article-footer .flex-right button span,
+.blog-post .article-footer .flex-right i {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600;
+}
+.blog-post .article-footer .flex-right p {
+  color: #3aafc9;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 2px;
+}
+
 /* !contact-me */
 #contact {
   height: 40vh;

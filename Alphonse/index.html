@@ -312,7 +312,21 @@
         <div class="copyrights">&copy; 2021 alphonse</div>
       </div>
     </footer>
-
+    <script>
+      // ! TESTIMONIAL SLIDER
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 4500,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
     <script
       src="https://kit.fontawesome.com/34ea0061e9.js"
       crossorigin="anonymous"
