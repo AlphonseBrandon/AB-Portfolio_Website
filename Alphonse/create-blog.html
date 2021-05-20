@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="blog.css" />
+    <title>create blog</title>
+  </head>
+  <body>
+    <div class="form">
+      <form action="" method="post">
+        <h1>CREATE A NEW BLOG POST</h1>
+        <div>
+          <label for="">Title</label>
+          <input class="input title" type="text" />
+        </div>
+
+        <div>
+          <label for="">Author</label>
+          <input class="input author" type="text" />
+        </div>
+        <div>
+          <label for="">Category</label>
+          <input class="input category" type="text" />
+        </div>
+
+        <div>
+          <label for="">Image (optional)</label>
+          <input class="input img" type="file" />
+        </div>
+        <div>
+          <label for="">Post</label>
+          <textarea
+            class="input message"
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+          ></textarea>
+        </div>
+        <div>
+          <input class="input submit-btn" type="submit" value="Post" />
+        </div>
+      </form>
+
+      <div class="inforesult"></div>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase.js"></script>
+    <script src="js/blog.js"></script>
+  </body>
+</html>

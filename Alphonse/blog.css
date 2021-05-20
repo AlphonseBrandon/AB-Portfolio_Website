@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  background-color: #222a36;
+}
+
+.form {
+  width: 60%;
+  margin: 5rem auto;
+}
+
+.form h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #676cdb;
+  margin-bottom: 2rem;
+}
+
+.form form {
+  width: 500px;
+  margin: auto;
+}
+
+.form form > div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+.form form > div > label {
+  font-size: 20px;
+  padding: 0 0 0.5rem;
+  color: #fff;
+}
+.form form > div > .input {
+  background-color: #29313d;
+  color: #676cdb;
+  font-size: 20px;
+  padding: 0.3rem;
+  border: none;
+  outline: none;
+  resize: none;
+}
