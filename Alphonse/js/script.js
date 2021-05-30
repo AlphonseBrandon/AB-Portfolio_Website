@@ -1,3 +1,14 @@
+// Your web app's Firebase configuration
+var firebaseConfig = {
+  apiKey: "AIzaSyBEEWY_-SQOfwalfeQS0ojxcXJFtxJreAA",
+  authDomain: "alphonse-blog.firebaseapp.com",
+  projectId: "alphonse-blog",
+  storageBucket: "alphonse-blog.appspot.com",
+  messagingSenderId: "625359301751",
+  appId: "1:625359301751:web:fb6713532acea0be862a72",
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 // ! BLOG POST
 const database = firebase.database();
 console.log(database);
